@@ -1,4 +1,4 @@
-FROM alpine:3.11 as builder
+FROM alpine:3.12 as builder
 
 WORKDIR /dist
 
@@ -18,7 +18,7 @@ RUN apk --no-cache add \
 
 # ---- Release ----
 # Copy static docs to alpine-based nginx container.
-FROM nginx:1.17.8-alpine
+FROM nginx:1.19-alpine
 LABEL maintainer "Sven <sven@ocular-d.tech>"
 
 #RUN apk --no-cache add bash
